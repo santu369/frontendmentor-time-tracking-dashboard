@@ -1,0 +1,54 @@
+@use "./common.scss" as *;
+@import "~bootstrap/scss/bootstrap.scss";
+
+body {
+  font-family: $font-rubik;
+  font-size: $font-size;
+  font-weight: $font-reg;
+  text-align: center;
+  min-width: 18.75rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: $background-bg;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+/* screen reader only class */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+  color: $white;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 64rem) {
+  body {
+    align-items: center;
+    min-height: 100vh;
+  }
+}
+
+/* no animations for users who prefer reduced animations */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 1ms !important;
+  }
+}

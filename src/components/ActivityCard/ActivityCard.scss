@@ -1,0 +1,165 @@
+@use "../../common.scss" as *;
+
+.ActivityCard {
+  margin-top: 1.5rem;
+  &__background {
+    height: 4rem;
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+    background-position: 90% 30%;
+  }
+  &:nth-of-type(2) {
+    .ActivityCard__background {
+      background-color: $work-bg;
+      background-image: $work-bg-img;
+    }
+  }
+  &:nth-of-type(3) {
+    .ActivityCard__background {
+      background-color: $play-bg;
+      background-image: $play-bg-img;
+    }
+  }
+  &:nth-of-type(4) {
+    .ActivityCard__background {
+      background-color: $study-bg;
+      background-image: $study-bg-img;
+    }
+  }
+  &:nth-of-type(5) {
+    .ActivityCard__background {
+      background-color: $exercise-bg;
+      background-image: $exercise-bg-img;
+    }
+  }
+  &:nth-of-type(6) {
+    .ActivityCard__background {
+      background-color: $social-bg;
+      background-image: $social-bg-img;
+    }
+  }
+  &:nth-of-type(7) {
+    .ActivityCard__background {
+      background-color: $self-care-bg;
+      background-image: $self-care-bg-img;
+    }
+  }
+  &__tile {
+    position: relative;
+    top: -1rem;
+    background: $card-bg;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    &:hover,
+    &:focus-visible {
+      background: $card-hover-bg;
+      cursor: pointer;
+      outline: 0.15rem dashed white;
+      outline-offset: 0.2rem;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    position: relative;
+  }
+  &__title {
+    margin-bottom: 0;
+    font-size: calc(1rem + 0.6vw);
+  }
+  &__options {
+    background: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    &:hover,
+    &:focus-visible {
+      background: $card-hover-bg;
+      cursor: pointer;
+      outline: 0.15rem dashed white;
+      outline-offset: 0.2rem;
+      & > img {
+        filter: brightness(1000%);
+      }
+    }
+  }
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: $font-light;
+  }
+  &__hours {
+    font-size: calc(1.5rem + 0.9vw);
+    margin-bottom: 0;
+  }
+  &__lastweek {
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: $light-blue;
+  }
+}
+
+@media only screen and (min-width: 48rem) {
+  .ActivityCard {
+    margin-top: 0;
+    margin-bottom: -1rem;
+    &:nth-of-type(even) {
+      grid-column: 1/3;
+    }
+    &:nth-of-type(odd) {
+      grid-column: 3/5;
+    }
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .ActivityCard {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    height: 15.25rem;
+    flex-direction: column;
+    &:nth-of-type(2) {
+      grid-row: 1/2;
+      grid-column: 2/3;
+    }
+    &:nth-of-type(3) {
+      grid-row: 1/2;
+      grid-column: 3/4;
+    }
+    &:nth-of-type(4) {
+      grid-row: 1/2;
+      grid-column: 4/5;
+    }
+    &:nth-of-type(5) {
+      grid-row: 2/3;
+      grid-column: 2/3;
+    }
+    &:nth-of-type(6) {
+      grid-row: 2/3;
+      grid-column: 3/4;
+    }
+    &:nth-of-type(7) {
+      grid-row: 2/3;
+      grid-column: 4/5;
+    }
+    &__title {
+      font-size: 1.25rem;
+    }
+    &__header {
+      margin-bottom: 0.5rem;
+    }
+    &__details {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__hours {
+      font-size: 3.5rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

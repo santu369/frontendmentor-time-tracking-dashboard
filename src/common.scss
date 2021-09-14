@@ -1,0 +1,35 @@
+// primary colors
+
+$profile-bg: hsl(246, 80%, 60%);
+
+$work-bg: hsl(15, 100%, 70%);
+$play-bg: hsl(195, 74%, 62%);
+$study-bg: hsl(348, 100%, 68%);
+$exercise-bg: hsl(145, 58%, 55%);
+$social-bg: hsl(264, 64%, 52%);
+$self-care-bg: hsl(43, 84%, 65%);
+
+// neutral colors
+
+$background-bg: hsl(226, 43%, 10%);
+$card-bg: hsl(235, 46%, 20%);
+// $card-hover-bg: hsl(235, 45%, 61%);
+$card-hover-bg: hsl(236, 41%, 34%);
+$light-blue: hsl(236, 100%, 87%);
+
+// typography
+
+$font-rubik: "Rubik", sans-serif;
+$font-light: 300;
+$font-reg: 400;
+$font-medium: 500;
+$font-size: 18px;
+
+//background images
+
+$work-bg-img: url(../../images/icon-work.svg);
+$play-bg-img: url(../../images/icon-play.svg);
+$study-bg-img: url(../../images/icon-study.svg);
+$exercise-bg-img: url(../../images/icon-exercise.svg);
+$social-bg-img: url(../../images/icon-social.svg);
+$self-care-bg-img: url(../../images/icon-self-care.svg);
