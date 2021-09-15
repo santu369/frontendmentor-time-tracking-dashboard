@@ -2,6 +2,7 @@
 
 .ActivityCard {
   margin-top: 1.5rem;
+  position: relative;
   &__background {
     height: 4rem;
     border-radius: 1rem;
@@ -74,17 +75,21 @@
     outline: none;
     border: none;
     position: absolute;
-    right: 0;
+    top: 4rem;
+    right: 1rem;
     z-index: 100;
     &:hover,
     &:focus-visible {
       background: $card-hover-bg;
       cursor: pointer;
-      outline: 0.15rem dashed white;
+      outline: 0.15rem dashed white !important;
       outline-offset: 0.2rem;
       & > img {
         filter: brightness(1000%);
       }
+    }
+    &:active {
+      transform: scale(0.95);
     }
   }
   &__details {

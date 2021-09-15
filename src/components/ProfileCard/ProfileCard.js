@@ -2,7 +2,7 @@ import React from "react";
 import userAvatar from "../../images/image-jeremy.png";
 import "./ProfileCard.scss";
 
-const ProfileCard = ({ dailyChange, selected }) => {
+const ProfileCard = ({ filterChange, selected }) => {
   return (
     <div className="ProfileCard">
       <div className="ProfileCard__user">
@@ -22,7 +22,7 @@ const ProfileCard = ({ dailyChange, selected }) => {
         >
           <button
             onClick={() => {
-              dailyChange("daily");
+              filterChange("daily");
             }}
           >
             daily
@@ -35,7 +35,7 @@ const ProfileCard = ({ dailyChange, selected }) => {
         >
           <button
             onClick={() => {
-              dailyChange("weekly");
+              filterChange("weekly");
             }}
           >
             weekly
@@ -48,7 +48,7 @@ const ProfileCard = ({ dailyChange, selected }) => {
         >
           <button
             onClick={() => {
-              dailyChange("monthly");
+              filterChange("monthly");
             }}
           >
             monthly

@@ -13,7 +13,7 @@ function App() {
     setSelected("weekly");
   }, []);
 
-  const dailyChange = (change) => {
+  const filterChange = (change) => {
     setFilter(change);
     setSelected(change);
   };
@@ -21,7 +21,7 @@ function App() {
     <>
       <main className="App app-animate">
         <h1 className="sr-only">Time Tracking Dashboard</h1>
-        <ProfileCard dailyChange={dailyChange} selected={selected} />
+        <ProfileCard filterChange={filterChange} selected={selected} />
         {activityData.map((activity, index) => {
           return (
             <ActivityCard
